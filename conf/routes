@@ -5,6 +5,7 @@
 # Controller for Sudoku
 
 GET     /                           controllers.SudokuController.sudoku
+GET     /sudokuPolymer              controllers.SudokuController.sudokuPolymer
 GET     /new                        controllers.SudokuController.newGrid
 GET     /solve                      controllers.SudokuController.solve
 GET     /highlight/:index           controllers.SudokuController.highlight(index:Int)

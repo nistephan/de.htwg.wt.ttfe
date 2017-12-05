@@ -28,6 +28,9 @@ class SudokuController @Inject()(cc: ControllerComponents) (implicit system: Act
     Ok(views.html.sudoku(gameController, message))
   }
 
+  def sudokuPolymer = Action {
+    Ok(views.html.sudokuPolymer())
+  }
   def newGrid = Action {
     gameController.createNewGrid
     Ok(views.html.sudoku(gameController, message))
