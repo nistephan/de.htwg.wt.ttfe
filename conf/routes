@@ -3,9 +3,13 @@
 # ~~~~
 
 # Controller for Sudoku
+
+
 GET     /                           controllers.SudokuController.sudoku
 GET     /new                        controllers.SudokuController.newGrid
-GET     /resize/:size               controllers.SudokuController.resize(size:Int)
+GET     /resize/:size                      controllers.SudokuController.resize(size:Int)
+
+GET     /about                      controllers.SudokuController.about
 
 
 # Map static resources from the /public folder to the /assets URL path
