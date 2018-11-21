@@ -21,7 +21,7 @@ libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "1.1.0"
 
 libraryDependencies += "com.h2database" % "h2" % "1.4.196"
 
-libraryDependencies += "org.scala-lang.modules" % "scala-swing_2.12" % "2.0.1"
+libraryDependencies += "org.scala-lang.modules" % "scala-swing_2.12" % "2.0.3"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 
