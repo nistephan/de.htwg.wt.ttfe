@@ -11,28 +11,27 @@ class TTFEController @Inject()(cc: ControllerComponents) extends AbstractControl
   def ttfeAsText =  gameController.fieldToString
 
   def ttfe = Action {
-    //Ok(views.html.sudoku(gameController))
-    Ok(views.html.ttfe(ttfeAsText))
+    Ok(views.html.ttfe(gameController))
   }
 
   def left = Action {
     gameController.moveDirection("L")
-    Ok(ttfeAsText)
+    Ok(views.html.ttfe(gameController))
   }
 
   def right = Action {
     gameController.moveDirection("R")
-    Ok(ttfeAsText)
+    Ok(views.html.ttfe(gameController))
   }
 
   def up = Action {
     gameController.moveDirection("U")
-    Ok(ttfeAsText)
+    Ok(views.html.ttfe(gameController))
   }
 
   def down = Action {
     gameController.moveDirection("D")
-    Ok(ttfeAsText)
+    Ok(views.html.ttfe(gameController))
   }
 
 
