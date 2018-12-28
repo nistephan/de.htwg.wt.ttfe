@@ -8,6 +8,8 @@ GET     /left                       controllers.TTFEController.left
 GET     /right                      controllers.TTFEController.right
 GET     /up                         controllers.TTFEController.up
 GET     /down                       controllers.TTFEController.down
+GET     /new                        controllers.TTFEController.restart
+GET     /about                      controllers.TTFEController.about
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
