@@ -1,5 +1,5 @@
 
-name := """HTWG-play-scala-seed"""
+name := """HTWG 2048"""
 
 version := "1.0-SNAPSHOT"
 

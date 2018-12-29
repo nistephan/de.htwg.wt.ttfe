@@ -44,4 +44,10 @@ class TTFEController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.ttfe(gameController, "About"))
   }
 
+  def gridToJson = Action {
+    //gameController.restart()
+    Ok(views.html.ttfe(gameController, "JSON"))
+    //Ok(gameController.toJson)
+  }
+
 }

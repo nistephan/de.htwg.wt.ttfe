@@ -41,6 +41,7 @@
             @for(xIndex <- 0 until size) {
                 @for(yIndex <- 0 until size) {
                     <div class="cell">
+                        <!-- id="scalar" -->
                         @controller.field.grid(xIndex)(yIndex)
                     </div>
                 }
