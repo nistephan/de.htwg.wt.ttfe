@@ -2,7 +2,7 @@ let size = 4
 
 let gameJson = {
     size:4,
-    0: {0:0,1:0,2:0,3:0},
+    0: {0:0,1:1,2:0,3:0},
     1: {0:1,1:0,2:0,3:0},
     2: {0:1,1:0,2:0,3:0},
     3: {0:1,1:0,2:0,3:0},
@@ -28,7 +28,9 @@ let grid = new Grid(gameJson.size)
 grid.fill(gameJson)
 
 function fillGrid(grid) {
-    $("#scalar").html(grid.cells);
+    for (let index = 0; index < grid.size * grid.size; index++) {
+            $("#scalar" + index).html(grid.cells[index]);
+    }
 }
 
 

@@ -2,7 +2,6 @@
 
 @size= @{ controller.field.grid.size }
 
-
 @main("HTWG 2048") {
 <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/ttfe.css")' />
 <script src='@routes.Assets.versioned("javascripts/bootstrap.min.js")'> </script>
@@ -38,14 +37,11 @@
 <div class="gamecontainer">
     <div class="game">
         <div class="house">
-            @for(xIndex <- 0 until size) {
-                @for(yIndex <- 0 until size) {
-                    <div class="cell">
-                        <!-- id="scalar" -->
-                        @controller.field.grid(xIndex)(yIndex)
-                    </div>
+            @for(xIndex <- 0 until size*size) {
+                <div class="cell" id="scalar@xIndex"></div>
+                @if(xIndex % 4==3){
+                    </br>
                 }
-                </br>
             }
             Score: @controller.field.score
         </div>
