@@ -38,18 +38,17 @@
     <div class="game">
         <div class="house">
             @for(xIndex <- 0 until size*size) {
-                <div class="cell" id="scalar@xIndex"></div>
-                @if(xIndex % 4==3){
+                <div class="cell" id="cell@xIndex"></div>
+                @if(xIndex % size == size - 1){
                     </br>
                 }
             }
-            Score: @controller.field.score
         </div>
 
     </div>
-    <div class="alert alert-primary" role="alert">
-        @message
-    </div>
-</div>
 
+</div>
+<div class="alert alert-primary" role="alert" >
+    @message
+</div>
 }
