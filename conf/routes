@@ -4,6 +4,7 @@
 
 # Controller for ttfe
 GET     /                           controllers.TTFEController.ttfe
+GET     /ttfePolymer              controllers.TTFEController.ttfePolymer
 GET     /left                       controllers.TTFEController.left
 GET     /right                      controllers.TTFEController.right
 GET     /up                         controllers.TTFEController.up

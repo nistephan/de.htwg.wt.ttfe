@@ -1,0 +1,205 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-repeat.html">
+
+<dom-module id="ttfe-app">
+    <template>
+        <style>
+      :host {
+        display: block;
+      }
+      @media (min-width: 480px) {
+          .pagecontainer {
+              width: 29em;
+              margin: auto;
+              margin-top: 1em;
+              display: block;
+          }
+          .gamecontainer {
+              height: 100%;
+              width: 100%;
+              display: inline-flex;
+              margin: 0em;
+              margin-top: 0.5em;
+              margin-bottom: 0.5em;
+              font-size:30px;
+              line-height: 33px;
+              font-family: "Verdana",Geneva, sans-serif;
+              font-weight: bold;
+              color:black;
+          }
+      }
+      @media (min-width: 800px) {
+          .pagecontainer {
+              width: 33.5em;
+              margin: auto;
+              margin-top: 1em;
+              display: block;
+          }
+          .gamecontainer {
+              height: 100%;
+              width: 100%;
+              display: inline-flex;
+              margin: 0em;
+              margin-top: 0.5em;
+              margin-bottom: 0.5em;
+              font-size:40px;
+              line-height: 44px;
+              font-family: "Verdana",Geneva, sans-serif;
+              font-weight: bold;
+              color:black;
+          }
+      }
+      @media (min-width: 1000px) {
+          .pagecontainer {
+              width: 51em;
+              margin: auto;
+              margin-top: 1em;
+              display: block;
+          }
+          .gamecontainer {
+              height: 100%;
+              width: 100%;
+              display: inline-flex;
+              margin: 0em;
+              margin-top: 0.5em;
+              margin-bottom: 0.5em;
+              font-size:60px;
+              line-height: 66px;
+              font-family: "Verdana",Geneva, sans-serif;
+              font-weight: bold;
+              color:black;
+          }
+      }
+      .buttonbarcontainer {
+          margin: auto;
+          display: inline-block;
+      }
+      .game {
+          border-style: inset;
+          border-width: 0.05em;
+          border-spacing: 0px;
+          border-color: #f6f6FF;
+          background-color: black;
+          padding: 0.05em;
+          margin:auto;
+          width: auto;
+      }
+      .clear {
+          clear:both;
+      }
+      .house {
+          display: inline-block;
+          float: left;
+          background-color:#eeeeee;
+          padding: 0.05em;
+          margin:0.05em;
+      }
+      .size9 {
+          width: 4.2em;
+          height: 4.2em;
+      }
+      .size4 {
+          width: 2.9em;
+          height: 2.9em;
+      }
+      .size1 {
+          width: 1.5em;
+          height: 1.5em;
+      }
+      .cell {
+          display: inline-block;
+          float:left;
+          border-style: outset;
+          border-width: 0.05em;
+          background-color: #E0E0FF;
+          border-color: #f6f6FF;
+          width: 1.2em;
+          height: 1.2em;
+          margin:0.05em;
+          text-align: center;
+      }
+      .number {
+          display:inline-block; /* switch to none if candidates should show*/
+          width: 100%;
+          hight: 100%;
+      }
+      .normal {
+          background-color:#E0E0FF;
+      }
+      .given {
+          background-color:#C8C8FF;
+      }
+      .highlighted {
+          background-color:#C0FFC0;
+      }
+      .candidatecell {
+          display: inline-block; /* switch to inline-block if candidates should show*/
+          float:left;
+          font-size: 25%;
+          border-style: outset;
+          border-width: 0.1em;
+          width: 1.45em;
+          height: 1.5em;
+          line-height: 1.5em;
+      }
+    </style>
+        <div class="pagecontainer">
+            <div class="buttonbarcontainer">
+                <label>
+                    Highlight
+                </label>
+                <div class="btn-group" >
+
+                    <a href="/highlight/0" class="btn btn-primary"> None </a>
+                    <a href="/highlight/1" class="btn btn-primary"> 1 </a>
+                </div>
+            </div>
+
+            <div class="gamecontainer">
+                <div class="game">
+                        <div class="house">
+                            <template is="dom-repeat" items="{{cells}}">
+                                <div class="cell" id="cell1"> [[item.value]]
+                                    <!-@if(cellIndex % blocksize==blocksize-1){}->
+                                    <div class="clear"></div>
+                                </div>
+                            </template>
+                        </div>
+                        <!-@if(houseIndex % blocksize==blocksize-1){}->
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+            <div class="alert alert-primary" role="alert">
+                Message
+            </div>
+        </div>
+    </template>
+
+    <script>
+    class TTFEApp extends Polymer.Element {
+      static get is() { return 'ttfe-app'; }
+      static get properties() {
+        return {
+          cell: {
+            type: Number,
+            value: [2]
+          },
+          cells: {
+            type: Array,
+            value() {
+              return [
+                {value: '0'},
+                {value: '0'},
+                {value: '0'},
+                {value: '0'}
+              ];
+            }
+          }
+        };
+      }
+    }
+    window.customElements.define(TTFEApp.is, TTFEApp);
+  </script>
+</dom-module>

@@ -1,0 +1,7 @@
+{
+  "name": "ttfe",
+  "short_name": "ttfe",
+  "description": "2048 for HTWG lecture Webtechnologies",
+  "start_url": "/",
+  "display": "standalone"
+}

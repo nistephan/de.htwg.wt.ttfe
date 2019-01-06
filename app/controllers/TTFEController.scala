@@ -244,6 +244,10 @@ class TTFEController @Inject()(cc: ControllerComponents) (implicit system: Actor
     return json.toString
   }
 
+  def ttfePolymer = Action {
+    Ok(views.html.ttfePolymer())
+  }
+
   def socket = WebSocket.accept[String, String] { request =>
     ActorFlow.actorRef { out =>
       println("Connect received")
