@@ -6,7 +6,8 @@ class Grid {
 
     fill(json) {
        for (let index = 0; index < this.size * this.size; index++) {
-               this.cells.push(json[index].value);
+               //this.cells.push(json[index].value);
+               this.cells[index] = (json[index].value);
        }
     }
 }
@@ -78,7 +79,8 @@ function connectWebSocket() {
             let json = JSON.parse(e.data);
             let cells = json.cells;
             grid.fill(cells);
-            updateGrid(grid);
+            updateGrid(grid, json.score);
+            //alert("updated" + e.data);
         }
 
     };

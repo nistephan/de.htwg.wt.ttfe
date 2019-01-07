@@ -264,6 +264,11 @@ class TTFEController @Inject()(cc: ControllerComponents) (implicit system: Actor
   class TTFEWebSocketActor(out: ActorRef) extends Actor {
     sendJsonToClient
 
+    while(true){
+      Thread.sleep(1000)
+      sendJsonToClient
+    }
+
     def receive = {
       case msg: String =>
         out ! (gridToJson.toString)
