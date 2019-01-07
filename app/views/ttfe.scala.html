@@ -3,6 +3,9 @@
 @size= @{ controller.field.grid.size }
 
 @main("HTWG 2048") {
+<script src="@routes.Assets.versioned("javascripts/vue.js")" ></script>
+<script src="@routes.Assets.versioned("javascripts/ttfeVue.js")" ></script>
+
 <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/ttfe.css")' />
 <script src='@routes.Assets.versioned("javascripts/bootstrap.min.js")'> </script>
 
@@ -33,19 +36,23 @@
     </div>
 </nav>
 
-
 <div class="gamecontainer">
     <div class="game">
         <div class="house">
             @for(xIndex <- 0 until size*size) {
-                <div class="cell" id="cell@xIndex"></div>
-                @if(xIndex % size == size - 1){
-                    </br>
-                }
+            <div class="cell" id="cell@xIndex"></div>
+            @if(xIndex % size == size - 1){
+            </br>
+            }
             }
         </div>
     </div>
 </div>
+
+<div id="ttfe-game" class="pagecontainer">
+    <!-- <ttfe-field></ttfe-field> --!>
+</div>
+
 
 <div class="alert alert-primary" role="alert" >
     @message
