@@ -16,6 +16,7 @@
     <title>@title</title>
     <link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
+
     @Html(webJarsUtil.css("bootstrap.min.css"))
     @Html(webJarsUtil.css("bootstrap-theme.min.css"))
     <link rel="stylesheet" href="@assets.path("stylesheets/main.css")">
@@ -95,7 +96,7 @@
             </div>
         </main>
         @Html(webJarsUtil.script("jquery.min.js"))
-        @Html(webJarsUtil.script("bootstrap.min.js"))
+        <!-- <script src="@assets.path("javascripts/bootstrap.min.js")"></script> --!>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
     <script src="@assets.path("javascripts/zxcvbnShim.js")"></script>
     </body>
