@@ -5,57 +5,51 @@ import play.api.mvc._
 import de.htwg.se.ttfe.TTFE
 import de.htwg.se.ttfe.model.{Cell, Field}
 import play.api.libs.json._
-
 import play.api.libs.streams.ActorFlow
 import akka.actor.ActorSystem
 import akka.stream.Materializer
 import akka.actor._
+import akka.actor.{ActorSystem, _}
+import akka.stream.Materializer
+import com.mohiva.play.silhouette.api.Silhouette
+import com.mohiva.play.silhouette.api.actions.SecuredRequest
+import org.webjars.play.WebJarsUtil
+import play.api.i18n.I18nSupport
+import utils.auth.DefaultEnv
 
+import scala.concurrent.Future
 
 @Singleton
-class TTFEController @Inject()(cc: ControllerComponents) (implicit system: ActorSystem, mat: Materializer) extends AbstractController(cc) {
+class TTFEController @Inject() (
+                                   components: ControllerComponents,
+                                   silhouette: Silhouette[DefaultEnv]
+                                 )(
+                                   implicit
+                                   webJarsUtil: WebJarsUtil,
+                                   assets: AssetsFinder,
+                                   system: ActorSystem,
+                                   mat: Materializer
+                                 ) extends AbstractController(components) with I18nSupport {
+
+
   val gameController = TTFE.controller
   def ttfeAsText =  gameController.fieldToString
 
-  def ttfe = Action {
-    Ok(views.html.ttfe(gameController, "Test"))
+
+
+  def ttfe = silhouette.SecuredAction.async { implicit request: SecuredRequest[DefaultEnv, AnyContent] =>
+    Future.successful(Ok(views.html.ttfe(gameController, "test", request.identity)))
   }
 
-  def left = Action {
-    gameController.moveDirection("L")
-    Ok(views.html.ttfe(gameController, "Test"))
-  }
-
-  def right = Action {
-    gameController.moveDirection("R")
-    Ok(views.html.ttfe(gameController, "Test"))
-  }
-
-  def up = Action {
-    gameController.moveDirection("U")
-    Ok(views.html.ttfe(gameController, "Test"))
-  }
-
-  def down = Action {
-    gameController.moveDirection("D")
-    Ok(views.html.ttfe(gameController, "Test"))
-  }
-
-  def restart = Action {
+  def restart = silhouette.SecuredAction.async { implicit request: SecuredRequest[DefaultEnv, AnyContent] =>
     gameController.restart()
-    Ok(views.html.ttfe(gameController, "Test"))
-  }
+    Future.successful(Ok(views.html.ttfe(gameController, "test", request.identity)))
+}
 
-  def about = Action {
-    //gameController.restart()
-    Ok(views.html.ttfe(gameController, "About"))
-  }
-
-  def move(direction: String) = Action {
+  def move(direction: String) = silhouette.SecuredAction.async { implicit request: SecuredRequest[DefaultEnv, AnyContent] =>
     gameController.moveDirection(direction)
-    Ok(views.html.ttfe(gameController, "move: " + direction))
+    Future.successful(Ok(views.html.ttfe(gameController, "move", request.identity)))
   }
-
 
   def gridToJson = Action {
     implicit val fieldWrites = new Writes[Field] {

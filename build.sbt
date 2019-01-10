@@ -1,6 +1,6 @@
 
 
-name := "play-silhouette-seed"
+name := "htwg-ttfe"
 
 version := "5.0.0"
 

@@ -3,9 +3,11 @@
 @import org.webjars.play.WebJarsUtil
 @import controllers.AssetsFinder
 
-@()(implicit request: RequestHeader, messages: Messages, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
-@main(messages("home.title"), None) {
+
+@(user: models.User)(implicit request: RequestHeader, messages: Messages, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+@main(messages("home.title"), Some(user)) {
 
 
 <div class="card">
@@ -47,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <a href="/sudoku" class="btn btn-primary">Play</a>
+        <a href="/ttfe" class="btn btn-primary">Play</a>
     </div>
 </div>
 
@@ -116,7 +118,7 @@
                 </div>
             </div>
         </div>
-        <a href="/sudoku" class="btn btn-primary">Play</a>
+        <a href="/ttfe" class="btn btn-primary">Play</a>
     </div>
 </div>
 

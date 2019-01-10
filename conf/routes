@@ -5,18 +5,14 @@
 # ttfe routes
 GET     /ttfe                       controllers.TTFEController.ttfe
 GET     /ttfePolymer                controllers.TTFEController.ttfePolymer
-GET     /left                       controllers.TTFEController.left
-GET     /right                      controllers.TTFEController.right
-GET     /up                         controllers.TTFEController.up
-GET     /down                       controllers.TTFEController.down
+
 GET     /new                        controllers.TTFEController.restart
-#GET     /about                      controllers.TTFEController.about
 GET     /json                       controllers.TTFEController.gridToJson
 GET     /move/:direction            controllers.TTFEController.move(direction:String)
 
 GET     /websocket                  controllers.TTFEController.socket
 
-GET     /about                      controllers.ApplicationController.index
+#GET     /about                      controllers.ApplicationController.index
 
 # Authentication and Authorization with Silhouette
 GET         /                                controllers.ApplicationController.index

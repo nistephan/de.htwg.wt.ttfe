@@ -61,17 +61,14 @@ function connectWebSocket() {
 
     websocket.onopen = function(event) {
         console.log("Connected to Websocket");
-        alert("Connected to Websocket");
     }
 
     websocket.onclose = function () {
         console.log('Connection with Websocket Closed!');
-        alert("Connection with Websocket Closed!");
     };
 
     websocket.onerror = function (error) {
         console.log('Error in Websocket Occured: ' + error);
-        alert('Error in Websocket Occured: ' + error);
     };
 
     websocket.onmessage = function (e) {
@@ -80,7 +77,6 @@ function connectWebSocket() {
             let cells = json.cells;
             grid.fill(cells);
             updateGrid(grid, json.score);
-            //alert("updated" + e.data);
         }
 
     };
