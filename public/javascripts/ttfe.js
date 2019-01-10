@@ -56,7 +56,7 @@ function loadJson() {
 }
 
 function connectWebSocket() {
-    var websocket = new WebSocket("ws://localhost:9000/websocket");
+    var websocket = new WebSocket("ws://htwg-ttfe.herokuapp.com/websocket");
     websocket.setTimeout
 
     websocket.onopen = function(event) {
