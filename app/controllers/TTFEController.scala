@@ -261,6 +261,7 @@ class TTFEController @Inject() (
     //sendJsonToClient
 
     while(true){
+      Thread.sleep(100)
       if(update){
         update = false
         sendJsonToClient
