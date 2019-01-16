@@ -29,7 +29,7 @@ Vue.component('ttfe-field', {
     template:`
         <div class="gamecontainer">
             <div class="game">
-                <div v-for="house in houses" class="house size4*4">
+                <div v-for="house in houses" class="house size4">
                     <div v-for="cell in house" class="cell" v-bind:id="cell.value"></div>
                 </div>
             </div>

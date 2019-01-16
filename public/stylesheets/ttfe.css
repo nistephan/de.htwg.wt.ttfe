@@ -95,8 +95,8 @@ a:link {
     display: inline-block;
     float: left;
     background-color:#eeeeee;
-    padding: 0.05em;
-    margin:0.05em;
+    padding: 0.0em;
+    margin:0.0em;
 }
 
 .size9 {
@@ -105,8 +105,8 @@ a:link {
 }
 
 .size4 {
-    width: 2.9em;
-    height: 2.9em;
+    width: 100%;
+    height: 100%;
 }
 
 .size1 {
@@ -119,13 +119,176 @@ a:link {
     float:left;
     border-style: outset;
     border-width: 0.05em;
-    background-color: #E0E0FF;
     border-color: #f6f6FF;
-    width: 1.2em;
-    height: 1.2em;
+    background-color: #E0E0E0;
+    width: 22%;
+    height: 22%;
     margin:0.1em;
     text-align: center;
 }
+
+
+.2 {
+    background-color: #FFF1CC;
+}
+
+.4 {
+    background-color: #F3D689;
+}
+
+
+.cell8 {
+    background-color: #EBA03B;
+}
+.value0 {
+    background-color: #EBA03B;
+}
+
+.value6 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
+    background-color: #000000;
+    width: 22%;
+    height: 22%;
+    margin:0.1em;
+    text-align: center;
+}
+
+.value7 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
+    background-color: #000000;
+    width: 22%;
+    height: 22%;
+    margin:0.1em;
+    text-align: center;
+}
+
+.value8 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
+    background-color: #000000;
+    width: 22%;
+    height: 22%;
+    margin:0.1em;
+    text-align: center;
+}
+
+.value9 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
+    background-color: #000000;
+    width: 22%;
+    height: 22%;
+    margin:0.1em;
+    text-align: center;
+}
+
+.value10 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
+    background-color: #000000;
+    width: 22%;
+    height: 22%;
+    margin:0.1em;
+    text-align: center;
+}
+
+.value11 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
+    background-color: #000000;
+    width: 22%;
+    height: 22%;
+    margin:0.1em;
+    text-align: center;
+}
+
+.value12 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
+    background-color: #000000;
+    width: 22%;
+    height: 22%;
+    margin:0.1em;
+    text-align: center;
+}
+
+.value13 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
+    background-color: #000000;
+    width: 22%;
+    height: 22%;
+    margin:0.1em;
+    text-align: center;
+}
+
+.value14 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
+    background-color: #000000;
+    width: 22%;
+    height: 22%;
+    margin:0.1em;
+    text-align: center;
+}
+
+.value15 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
+    background-color: #000000;
+    width: 22%;
+    height: 22%;
+    margin:0.1em;
+    text-align: center;
+}
+
+.value0 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
+    background-color: #000000;
+    width: 22%;
+    height: 22%;
+    margin:0.1em;
+    text-align: center;
+}
+
+
+
 .number {
     display:inline-block; /* switch to none if candidates should show*/
     width: 100%;
@@ -142,13 +305,3 @@ a:link {
     background-color:#C0FFC0;
 }
 
-.candidatecell {
-    display: inline-block; /* switch to inline-block if candidates should show*/
-    float:left;
-    font-size: 25%;
-    border-style: outset;
-    border-width: 0.1em;
-    width: 1.45em;
-    height: 1.5em;
-    line-height: 1.5em;
-}

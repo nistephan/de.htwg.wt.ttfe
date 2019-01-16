@@ -6,6 +6,7 @@
 @(controller:de.htwg.se.ttfe.controller.Controller, message:String, user: models.User)(implicit request: RequestHeader, messages: Messages, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
 @size= @{ controller.field.grid.size }
+@score= @{ controller.field.score }
 
 @main("HTWG 2048", Some(user)) {
 <script src="@routes.Assets.versioned("javascripts/vue.js")" ></script>
@@ -16,21 +17,22 @@
 
 
 
-<div class="gamecontainer">
+<!--<div class="gamecontainer">
     <div class="game">
         <div class="house">
             @for(xIndex <- 0 until size*size) {
-            <div class="cell" id="cell@xIndex"></div>
+            <div class="cell cell@xIndex" id="cell@xIndex"></div>
             @if(xIndex % size == size - 1){
             </br>
             }
             }
         </div>
     </div>
-</div>
-
-<!--<div id="ttfe-game" class="pagecontainer">
-    <ttfe-field></ttfe-field>
 </div>--!>
+
+<div id="ttfe-game" class="pagecontainer">
+    <ttfe-field></ttfe-field>
+</div>
+</br>Score: @score
 
 }

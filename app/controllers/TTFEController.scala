@@ -261,11 +261,8 @@ class TTFEController @Inject() (
     //sendJsonToClient
 
     while(true){
-      Thread.sleep(500)
-      if(update){
-        update = false
-        sendJsonToClient
-      }
+      Thread.sleep(1000)
+      sendJsonToClient
     }
 
     def receive = {
