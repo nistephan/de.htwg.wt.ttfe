@@ -34,6 +34,7 @@ class TTFEController @Inject() (
 
   val gameController = TTFE.controller
   def ttfeAsText =  gameController.fieldToString
+  var update = false
 
 
 
@@ -48,6 +49,7 @@ class TTFEController @Inject() (
 
   def move(direction: String) = silhouette.SecuredAction.async { implicit request: SecuredRequest[DefaultEnv, AnyContent] =>
     gameController.moveDirection(direction)
+    update = true
     Future.successful(Ok(views.html.ttfe(gameController, "move", request.identity)))
   }
 
@@ -259,8 +261,11 @@ class TTFEController @Inject() (
     sendJsonToClient
 
     while(true){
-      Thread.sleep(1000)
-      sendJsonToClient
+      Thread.sleep(10)
+      if(update){
+        update = false
+        sendJsonToClient
+      }
     }
 
     def receive = {
