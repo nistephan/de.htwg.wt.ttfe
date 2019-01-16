@@ -258,10 +258,9 @@ class TTFEController @Inject() (
   }
 
   class TTFEWebSocketActor(out: ActorRef) extends Actor {
-    sendJsonToClient
+    //sendJsonToClient
 
     while(true){
-      Thread.sleep(10)
       if(update){
         update = false
         sendJsonToClient
