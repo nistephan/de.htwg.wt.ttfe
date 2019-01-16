@@ -25,6 +25,11 @@ function moveOnServer(direction) {
     $.get("/move/"+direction, function(data) {
         console.log("Move on Server");
     });
+    changeColor();
+}
+
+function changeColor(){
+    document.getElementById('2').style.color = 'blue';
 }
 
 window.onkeyup = function(e) {
