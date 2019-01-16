@@ -19,7 +19,6 @@ function updateGrid(grid, score) {
             $("#cell" + index).html(grid.cells[index]);
     }
     $("#score").html(score);
-    changeColor();
 }
 
 function moveOnServer(direction) {
@@ -29,8 +28,10 @@ function moveOnServer(direction) {
 }
 
 function changeColor(){
-    document.getElementById('2').style.color = "#EBA03B";
-    document.getElementById('cell2').style.color = "#EBA03B";
+    alert("changecolor");
+    document.getElementById('2').style.backgroundColor = "#EBA03B";
+    document.getElementById('cell2').body.style.backgroundColor = "#EBA03B";
+    document.getElementById('cell2').style.backgroundColor = "#EBA03B";
 }
 
 window.onkeyup = function(e) {
@@ -57,6 +58,7 @@ function loadJson() {
             grid = new Grid(result.size);
             grid.fill(result.cells);
             updateGrid(grid, result.score);
+            changeColor();
         }
     });
 }
