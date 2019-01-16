@@ -19,17 +19,18 @@ function updateGrid(grid, score) {
             $("#cell" + index).html(grid.cells[index]);
     }
     $("#score").html(score);
+    changeColor();
 }
 
 function moveOnServer(direction) {
     $.get("/move/"+direction, function(data) {
         console.log("Move on Server");
     });
-    changeColor();
 }
 
 function changeColor(){
-    document.getElementById('2').style.color = 'blue';
+    document.getElementById('2').style.color = "#EBA03B";
+    document.getElementById('cell2').style.color = "#EBA03B";
 }
 
 window.onkeyup = function(e) {
