@@ -1,5 +1,7 @@
 package controllers
 
+import java.util.Observable
+
 import javax.inject._
 import play.api.mvc._
 import de.htwg.se.ttfe.TTFE
@@ -18,6 +20,7 @@ import play.api.i18n.I18nSupport
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future
+import scala.swing.Reactor
 
 @Singleton
 class TTFEController @Inject() (
@@ -29,13 +32,11 @@ class TTFEController @Inject() (
                                    assets: AssetsFinder,
                                    system: ActorSystem,
                                    mat: Materializer
-                                 ) extends AbstractController(components) with I18nSupport {
+                                 ) extends AbstractController(components) with I18nSupport{
 
 
   val gameController = TTFE.controller
   def ttfeAsText =  gameController.fieldToString
-  var update = false
-
 
 
   def ttfe = silhouette.SecuredAction.async { implicit request: SecuredRequest[DefaultEnv, AnyContent] =>
@@ -49,7 +50,6 @@ class TTFEController @Inject() (
 
   def move(direction: String) = silhouette.SecuredAction.async { implicit request: SecuredRequest[DefaultEnv, AnyContent] =>
     gameController.moveDirection(direction)
-    update = true
     Future.successful(Ok(views.html.ttfe(gameController, "move", request.identity)))
   }
 
@@ -257,11 +257,10 @@ class TTFEController @Inject() (
     }
   }
 
-  class TTFEWebSocketActor(out: ActorRef) extends Actor {
-    //sendJsonToClient
+  class TTFEWebSocketActor(out: ActorRef) extends Actor{
 
     while(true){
-      Thread.sleep(1000)
+      Thread.sleep(500)
       sendJsonToClient
     }
 
