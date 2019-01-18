@@ -127,167 +127,45 @@ a:link {
     text-align: center;
 }
 
-
-.2 {
-    background-color: #FFF1CC;
+.value0 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
+    background-color: #E0E0E0;
+    width: 22%;
+    height: 22%;
+    margin:0.1em;
+    text-align: center;
 }
 
-.4 {
+.value2 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
+    background-color: #EBA03B;
+    width: 22%;
+    height: 22%;
+    margin:0.1em;
+    text-align: center;
+}
+
+.value4 {
+    display: inline-block;
+    float:left;
+    border-style: outset;
+    border-width: 0.05em;
+    border-color: #f6f6FF;
     background-color: #F3D689;
-}
-
-
-.cell8 {
-    background-color: #EBA03B;
-}
-.value0 {
-    background-color: #EBA03B;
-}
-
-.value6 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
-    background-color: #000000;
     width: 22%;
     height: 22%;
     margin:0.1em;
     text-align: center;
+
 }
-
-.value7 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
-    background-color: #000000;
-    width: 22%;
-    height: 22%;
-    margin:0.1em;
-    text-align: center;
-}
-
-.value8 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
-    background-color: #000000;
-    width: 22%;
-    height: 22%;
-    margin:0.1em;
-    text-align: center;
-}
-
-.value9 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
-    background-color: #000000;
-    width: 22%;
-    height: 22%;
-    margin:0.1em;
-    text-align: center;
-}
-
-.value10 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
-    background-color: #000000;
-    width: 22%;
-    height: 22%;
-    margin:0.1em;
-    text-align: center;
-}
-
-.value11 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
-    background-color: #000000;
-    width: 22%;
-    height: 22%;
-    margin:0.1em;
-    text-align: center;
-}
-
-.value12 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
-    background-color: #000000;
-    width: 22%;
-    height: 22%;
-    margin:0.1em;
-    text-align: center;
-}
-
-.value13 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
-    background-color: #000000;
-    width: 22%;
-    height: 22%;
-    margin:0.1em;
-    text-align: center;
-}
-
-.value14 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
-    background-color: #000000;
-    width: 22%;
-    height: 22%;
-    margin:0.1em;
-    text-align: center;
-}
-
-.value15 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
-    background-color: #000000;
-    width: 22%;
-    height: 22%;
-    margin:0.1em;
-    text-align: center;
-}
-
-.value0 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
-    background-color: #000000;
-    width: 22%;
-    height: 22%;
-    margin:0.1em;
-    text-align: center;
-}
-
-
 
 .number {
     display:inline-block; /* switch to none if candidates should show*/

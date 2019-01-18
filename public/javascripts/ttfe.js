@@ -28,10 +28,7 @@ function moveOnServer(direction) {
 }
 
 function changeColor(){
-    alert("changecolor");
-    document.getElementById('2').style.backgroundColor = "#EBA03B";
-    document.getElementById('cell2').body.style.backgroundColor = "#EBA03B";
-    document.getElementById('cell2').style.backgroundColor = "#EBA03B";
+    document.getElementById('cell2').setAttribute("class", "value" + document.getElementById('cell2').innerHTML);
 }
 
 window.onkeyup = function(e) {
