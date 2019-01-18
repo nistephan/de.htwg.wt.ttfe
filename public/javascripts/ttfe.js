@@ -31,7 +31,8 @@ function moveOnServer(direction) {
 
 function changeColor(){
     for (let i = 0; i < grid.size * grid.size; i++){
-        document.getElementById('cell' + i).setAttribute("class", "value" + document.getElementById('cell' + i).innerHTML);
+        var d = document.getElementById('cell' + i);
+        d.setAttribute("class", "value" + document.getElementById('cell' + i).innerHTML)
     }
 }
 
