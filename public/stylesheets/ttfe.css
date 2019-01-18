@@ -128,42 +128,15 @@ a:link {
 }
 
 .value0 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
     background-color: #E0E0E0;
-    width: 22%;
-    height: 22%;
-    margin:0.1em;
-    text-align: center;
 }
 
 .value2 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
     background-color: #EBA03B;
-    width: 22%;
-    height: 22%;
-    margin:0.1em;
-    text-align: center;
 }
 
 .value4 {
-    display: inline-block;
-    float:left;
-    border-style: outset;
-    border-width: 0.05em;
-    border-color: #f6f6FF;
     background-color: #F3D689;
-    width: 22%;
-    height: 22%;
-    margin:0.1em;
-    text-align: center;
 
 }
 
