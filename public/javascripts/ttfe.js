@@ -28,7 +28,9 @@ function moveOnServer(direction) {
 }
 
 function changeColor(){
-    document.getElementById('cell2').setAttribute("class", "value" + document.getElementById('cell2').innerHTML);
+    for (let i = 0; i < grid.size * grid.size; i++){
+        document.getElementById('cell' + i).setAttribute("class", "cell value" + document.getElementById('cell' + i).innerHTML);
+    }
 }
 
 window.onkeyup = function(e) {
