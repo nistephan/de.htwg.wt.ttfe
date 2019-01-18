@@ -129,15 +129,90 @@ a:link {
 
 .value0 {
     background-color: #E0E0E0;
+    color: #E0E0E0;
 }
 
 .value2 {
-    background-color: #EBA03B;
+    background-color: #FFF1B3;
 }
 
 .value4 {
-    background-color: #F3D689;
+    background-color: #FCE167;
+}
 
+.value8 {
+    background-color: #FFC920;
+    color: #FFFFFF;
+}
+
+.value16 {
+    background-color: #EA690A;
+    color: #FFFFFF;
+}
+
+.value32 {
+    background-color: #F13315;
+    color: #FFFFFF;
+}
+
+.value64 {
+    background-color: #F13315;
+    color: #FFFFFF;
+}
+
+.value128 {
+    background-color: #ECCE0F;
+    color: #FFFFFF;
+}
+
+.value256 {
+    background-color: #ECCE0F;
+    color: #FFFFFF;
+}
+
+.value512 {
+    background-color: #ECCE0F;
+    color: #FFFFFF;
+}
+
+.value1024 {
+    background-color: #ECCE0F;
+    color: #FFFFFF;
+}
+
+.value2048 {
+    background-color: #ECCE0F;
+    color: #FFFFFF;
+}
+
+.value4096 {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.value8192 {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.value16384 {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.value32768 {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.value65536 {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.value131072 {
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 .number {
