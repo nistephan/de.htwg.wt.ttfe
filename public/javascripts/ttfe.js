@@ -27,6 +27,7 @@ function moveOnServer(direction) {
     $.get("/move/"+direction, function(data) {
         console.log("Move on Server");
     });
+    changeColor();
 }
 
 function changeColor(){
