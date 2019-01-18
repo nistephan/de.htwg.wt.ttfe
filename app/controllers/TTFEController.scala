@@ -46,10 +46,11 @@ class TTFEController @Inject() (
   def restart = silhouette.SecuredAction.async { implicit request: SecuredRequest[DefaultEnv, AnyContent] =>
     gameController.restart()
     Future.successful(Ok(views.html.ttfe(gameController, "test", request.identity)))
-}
+  }
 
   def move(direction: String) = silhouette.SecuredAction.async { implicit request: SecuredRequest[DefaultEnv, AnyContent] =>
     gameController.moveDirection(direction)
+
     Future.successful(Ok(views.html.ttfe(gameController, "move", request.identity)))
   }
 
