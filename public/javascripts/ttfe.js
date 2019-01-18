@@ -1,3 +1,5 @@
+let websocket = new WebSocket("wss://htwg-ttfe.herokuapp.com/websocket");
+
 class Grid {
     constructor(size){
         this.size = size;
@@ -63,9 +65,6 @@ function loadJson() {
 }
 
 function connectWebSocket() {
-    var websocket = new WebSocket("wss://htwg-ttfe.herokuapp.com/websocket");
-    websocket.setTimeout
-
     websocket.onopen = function(event) {
         console.log("Connected to Websocket");
     }
