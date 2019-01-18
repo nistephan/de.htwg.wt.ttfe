@@ -61,7 +61,6 @@ function loadJson() {
             grid.fill(result.cells);
             updateGrid(grid, result.score);
             changeColor();
-            alert("update");
         }
     });
 }
@@ -85,6 +84,7 @@ function connectWebSocket() {
             let cells = json.cells;
             grid.fill(cells);
             updateGrid(grid, json.score);
+            changeColor();
         }
 
     };
