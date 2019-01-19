@@ -183,56 +183,67 @@ a:link {
 .value128 {
     background-color: #ECCE0F;
     color: #FFFFFF;
+    font-size:40px;
 }
 
 .value256 {
     background-color: #ECCE0F;
     color: #FFFFFF;
+    font-size:40px;
 }
 
 .value512 {
     background-color: #ECCE0F;
     color: #FFFFFF;
+    font-size:40px;
 }
 
 .value1024 {
     background-color: #ECCE0F;
     color: #FFFFFF;
+    font-size:30px;
 }
 
 .value2048 {
     background-color: #ECCE0F;
     color: #FFFFFF;
+    font-size:30px;
 }
 
 .value4096 {
     background-color: #000000;
     color: #FFFFFF;
+    font-size:30px;
 }
 
 .value8192 {
     background-color: #000000;
     color: #FFFFFF;
+    font-size:30px;
 }
 
 .value16384 {
     background-color: #000000;
     color: #FFFFFF;
+    font-size:20px;
 }
 
 .value32768 {
     background-color: #000000;
     color: #FFFFFF;
+    font-size:20px;
 }
 
 .value65536 {
     background-color: #000000;
     color: #FFFFFF;
+    font-size:20px;
 }
 
 .value131072 {
     background-color: #000000;
     color: #FFFFFF;
+    font-size:15px;
 }
 
 .number {
