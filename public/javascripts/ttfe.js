@@ -1,4 +1,4 @@
-let websocket = new WebSocket("wss://htwg-ttfe.herokuapp.com/websocket");
+let websocket = new WebSocket("ws://localhost:9000/websocket");
 
 class Grid {
     constructor(size){

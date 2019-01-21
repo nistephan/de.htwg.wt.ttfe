@@ -261,7 +261,7 @@ class TTFEController @Inject() (
   class TTFEWebSocketActor(out: ActorRef) extends Actor{
 
     while(true){
-      Thread.sleep(500)
+      Thread.sleep(100)
       sendJsonToClient
     }
 
@@ -272,7 +272,7 @@ class TTFEController @Inject() (
     }
 
     def sendJsonToClient = {
-      println("Received event from Controller")
+      //println("Received event from Controller")
       out ! (gridToJsonRet)
     }
   }
