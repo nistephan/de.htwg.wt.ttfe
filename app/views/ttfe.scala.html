@@ -1,0 +1,47 @@
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@(controller:de.htwg.se.ttfe.controller.Controller, message:String, user: models.User)(implicit request: RequestHeader, messages: Messages, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+@size= @{ controller.field.grid.size }
+@score= @{ controller.field.score }
+
+@main("HTWG 2048", Some(user)) {
+<script src="@routes.Assets.versioned("javascripts/vue.js")" ></script>
+<script src="@routes.Assets.versioned("javascripts/ttfeVue.js")" ></script>
+
+<link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/ttfe.css")' />
+<!--<script src='@routes.Assets.versioned("javascripts/bootstrap.min.js")'> </script>--!>
+
+
+
+<!--<div class="gamecontainer">
+    <div class="game">
+        <div class="house">
+            @for(xIndex <- 0 until size*size) {
+            <div class="cell cell@xIndex" id="cell@xIndex"></div>
+            @if(xIndex % size == size - 1){
+            </br>
+            }
+            }
+        </div>
+    </div>
+</div>--!>
+
+<div id="ttfe-game" class="pagecontainer">
+    <ttfe-field></ttfe-field>
+    <center>Score:
+    <div id="score"></div>
+
+    <a class="btn" onclick="moveOnServer('U');">Up</a>
+    </br>
+    <a class="btn" onclick="moveOnServer('L');">Left</a>
+    <a class="btn" onclick="moveOnServer('D');">Down</a>
+    <a class="btn" onclick="moveOnServer('R');">Right</a>
+    </center>
+</div>
+
+
+}
