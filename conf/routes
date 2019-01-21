@@ -5,11 +5,9 @@
 # ttfe routes
 GET     /ttfe                       controllers.TTFEController.ttfe
 GET     /ttfePolymer                controllers.TTFEController.ttfePolymer
-
 GET     /new                        controllers.TTFEController.restart
 GET     /json                       controllers.TTFEController.gridToJson
 GET     /move/:direction            controllers.TTFEController.move(direction:String)
-
 GET     /websocket                  controllers.TTFEController.socket
 
 #GET     /about                      controllers.ApplicationController.index

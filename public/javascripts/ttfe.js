@@ -8,7 +8,6 @@ class Grid {
 
     fill(json) {
        for (let index = 0; index < this.size * this.size; index++) {
-               //this.cells.push(json[index].value);
                this.cells[index] = (json[index].value);
        }
     }

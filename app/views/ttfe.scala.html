@@ -3,7 +3,7 @@
 @import org.webjars.play.WebJarsUtil
 @import controllers.AssetsFinder
 
-@(controller:de.htwg.se.ttfe.controller.Controller, message:String, user: models.User)(implicit request: RequestHeader, messages: Messages, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+@(controller:de.htwg.se.ttfe.controller.Controller, user: models.User)(implicit request: RequestHeader, messages: Messages, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
 @size= @{ controller.field.grid.size }
 @score= @{ controller.field.score }
@@ -21,10 +21,10 @@
     <div class="game">
         <div class="house">
             @for(xIndex <- 0 until size*size) {
-            <div class="cell cell@xIndex" id="cell@xIndex"></div>
-            @if(xIndex % size == size - 1){
-            </br>
-            }
+                <div class="cell cell@xIndex" id="cell@xIndex"></div>
+                @if(xIndex % size == size - 1){
+                    </br>
+                }
             }
         </div>
     </div>

@@ -40,18 +40,17 @@ class TTFEController @Inject() (
 
 
   def ttfe = silhouette.SecuredAction.async { implicit request: SecuredRequest[DefaultEnv, AnyContent] =>
-    Future.successful(Ok(views.html.ttfe(gameController, "test", request.identity)))
+    Future.successful(Ok(views.html.ttfe(gameController, request.identity)))
   }
 
   def restart = silhouette.SecuredAction.async { implicit request: SecuredRequest[DefaultEnv, AnyContent] =>
     gameController.restart()
-    Future.successful(Ok(views.html.ttfe(gameController, "test", request.identity)))
+    Future.successful(Ok(views.html.ttfe(gameController, request.identity)))
   }
 
   def move(direction: String) = silhouette.SecuredAction.async { implicit request: SecuredRequest[DefaultEnv, AnyContent] =>
     gameController.moveDirection(direction)
-
-    Future.successful(Ok(views.html.ttfe(gameController, "move", request.identity)))
+    Future.successful(Ok(views.html.ttfe(gameController, request.identity)))
   }
 
   def gridToJson = Action {
